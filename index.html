@@ -1,141 +1,798 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Raju Prasad Pradhan | Gram Panchayat Panduwa</title>
-<meta name="description" content="Gram Panchayat Panduwa, Bara, Prayagraj: news, notices, vikas karya aur shikayat.">
 <style>
-:root{--bg:#f4f6fb;--card:#fff;--ink:#14213d;--mut:#5b6478;--line:#dfe3ee;--acc:#f59e0b;--on:#14213d;--bad:#c62828;--ok:#0f766e;--g:linear-gradient(135deg,#0f766e,#2563eb);box-sizing:border-box}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1628;--card:#17223b;--ink:#eef1f8;--mut:#9aa6c0;--line:#2a3757;--bad:#ff8a80;--ok:#3ccdb7}}
-:root[data-theme="dark"]{--bg:#0e1628;--card:#17223b;--ink:#eef1f8;--mut:#9aa6c0;--line:#2a3757;--bad:#ff8a80;--ok:#3ccdb7}
-*{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.5;padding-bottom:84px}
-header{background:var(--g);color:#fff;padding:calc(12px + env(safe-area-inset-top,0px)) 0 8px}
-.wrap{max-width:720px;margin:0 auto;padding:0 14px}
-header b{font-size:20px}
-.sub{font-size:12px;opacity:.9}
-.top{display:flex;gap:6px;overflow-x:auto;padding:10px 14px 2px;max-width:720px;margin:0 auto}
-.top a{color:#fff;text-decoration:none;font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.18);white-space:nowrap}
-.top a.on{background:#fff;color:#0f766e;font-weight:600}
-main{padding-top:14px;padding-bottom:10px}
-h1{font-size:22px;margin:0 0 6px}h2{font-size:18px;margin:18px 0 8px}h3{margin:6px 0 4px;font-size:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
-.card img{width:100%;max-height:200px;object-fit:cover;border-radius:10px}
-.hero{background:var(--g);color:#fff;border-radius:16px;padding:18px;margin-bottom:6px}
-.note{color:var(--mut);font-size:12px}
-.err{color:var(--bad);font-size:13px}
-.chip{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;background:var(--acc);color:var(--on);font-weight:600}
-input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:10px;min-height:44px;margin:4px 0 8px}
-textarea{min-height:80px}
-label{font-size:12px;color:var(--mut)}
-.btn{border:0;background:var(--acc);color:var(--on);font:inherit;font-weight:600;padding:10px 16px;border-radius:10px;cursor:pointer;min-height:44px}
-.btn.alt{background:none;border:1px solid var(--line);color:var(--ink)}
-.btn.red{background:none;color:var(--bad);border:1px solid var(--bad)}
-.btn:disabled{opacity:.4}
-.row{display:flex;gap:8px;align-items:flex-start}.row input{margin-top:0}
-.tabs{display:flex;gap:6px;margin-bottom:8px}.tabs button{flex:1;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px;border-radius:10px;font:inherit;cursor:pointer}
-.tabs button.on{background:var(--acc);color:var(--on);font-weight:600}
+:root {
+  --bg:#f4f6fb;
+  --card:#fff;
+  --ink:#14213d;
+  --mut:#657086;
+  --line:#dfe3ee;
+  --accent:#f5a623;
+  --green:#087e70;
+}
+[data-theme="dark"] {
+  --bg:#101a2d;
+  --card:#192641;
+  --ink:#fff;
+  --mut:#aab5ca;
+  --line:#30405f;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:var(--bg);
+ color:var(--ink);
+ font-family:Arial,sans-serif;
+ padding-bottom:80px;
+}
+header{
+ background:linear-gradient(135deg,#087e70,#2563eb);
+ color:white;
+ padding:17px 14px 10px;
+}
+.wrap{max-width:760px;margin:auto;padding:0 14px}
+header b{font-size:21px}
+.sub{font-size:12px}
+.top{
+ display:flex;
+ gap:7px;
+ overflow:auto;
+ padding:12px 0 4px;
+}
+.top a{
+ color:white;
+ text-decoration:none;
+ background:#ffffff30;
+ border-radius:30px;
+ padding:8px 13px;
+ white-space:nowrap;
+ font-size:13px;
+}
+.top a.on{background:white;color:#087e70}
+main{padding-top:15px}
+h1{font-size:23px}
+h2{font-size:19px;margin-top:20px}
+h3{font-size:16px}
+.card{
+ background:var(--card);
+ border:1px solid var(--line);
+ border-radius:14px;
+ padding:14px;
+ margin-bottom:12px;
+}
+.hero{
+ background:linear-gradient(135deg,#087e70,#2563eb);
+ color:white;
+ border-radius:16px;
+ padding:20px;
+}
+input,textarea,select{
+ display:block;
+ width:100%;
+ padding:12px;
+ margin:6px 0 12px;
+ border:1px solid var(--line);
+ border-radius:9px;
+ background:var(--bg);
+ color:var(--ink);
+ font-size:15px;
+}
+textarea{min-height:90px}
+label{font-size:13px;color:var(--mut)}
+button,.btn{
+ border:0;
+ padding:11px 16px;
+ border-radius:9px;
+ background:var(--accent);
+ color:#14213d;
+ font-weight:bold;
+ cursor:pointer;
+ text-decoration:none;
+ display:inline-block;
+}
+.btn.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.btn.red{background:#ffe5e5;color:#b91c1c}
+.note{font-size:12px;color:var(--mut)}
+.err{color:#d22}
+.chip{background:#ffdf8b;padding:3px 9px;border-radius:20px;font-size:11px}
+.tabs{display:flex;gap:7px;margin-bottom:10px}
+.tabs button{flex:1}
+.tabs button.on{background:#087e70;color:white}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.grid img{width:100%;height:120px;object-fit:cover;border-radius:10px;cursor:pointer}
-.pg{display:flex;justify-content:center;align-items:center;gap:14px;margin:10px 0}
-.stat{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.stat div{background:var(--g);color:#fff;border-radius:12px;padding:12px;text-align:center}.stat b{font-size:22px;display:block}
-.li{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
-.bot{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-.bot a{flex:1;text-align:center;text-decoration:none;color:var(--mut);padding:8px 2px;font-size:11px}
-.bot a span{display:block;font-size:20px}.bot a.on{color:var(--ok);font-weight:600}
-footer{color:var(--mut);font-size:12px;padding-bottom:20px}
-.zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:9}.zoom img{max-width:96%;max-height:90%}
+.grid img{width:100%;height:130px;object-fit:cover;border-radius:10px}
+.bot{
+ position:fixed;
+ bottom:0;left:0;right:0;
+ display:flex;
+ background:var(--card);
+ border-top:1px solid var(--line);
+ padding-bottom:env(safe-area-inset-bottom);
+ z-index:5;
+}
+.bot a{
+ flex:1;
+ text-align:center;
+ padding:8px 2px;
+ color:var(--mut);
+ text-decoration:none;
+ font-size:11px;
+}
+.bot span{display:block;font-size:20px}
+.bot a.on{color:#087e70;font-weight:bold}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat div{background:linear-gradient(135deg,#087e70,#2563eb);color:white;text-align:center;padding:15px;border-radius:12px}
+.stat b{display:block;font-size:23px}
+.li{padding:10px 0;border-bottom:1px solid var(--line)}
+#toast{
+ display:none;
+ position:fixed;
+ bottom:90px;
+ left:50%;
+ transform:translateX(-50%);
+ background:#14213d;
+ color:white;
+ padding:12px 18px;
+ border-radius:10px;
+ z-index:10;
+}
+footer{padding:15px 0;font-size:12px;color:var(--mut)}
+footer a{color:var(--green)}
 .hide{display:none}
-#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:96px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;z-index:10;display:none}
+@media(min-width:600px){
+ .grid{grid-template-columns:repeat(3,1fr)}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><b>Raju Prasad Pradhan</b><div class="sub">Gram Panchayat Panduwa, Bara, Prayagraj, Uttar Pradesh</div></div><div class="top" id="top"></div></header>
-<main class="wrap" id="app"></main>
-<footer class="wrap" id="foot"></footer>
+
+<header>
+ <div class="wrap">
+  <b>Raju Prasad Pradhan</b>
+  <div class="sub">Gram Panchayat Panduwa, Bara, Prayagraj, Uttar Pradesh</div>
+  <nav class="top" id="top"></nav>
+ </div>
+</header>
+
+<main class="wrap" id="app">
+ <p>लोड हो रहा है...</p>
+</main>
+
+<footer class="wrap">
+ यह एक कम्युनिटी वेबसाइट है, आधिकारिक सरकारी वेबसाइट नहीं।
+ <br>
+ <a href="#privacy">गोपनीयता</a> |
+ <a href="#terms">नियम एवं शर्तें</a>
+</footer>
+
 <nav class="bot" id="bot"></nav>
-<div class="zoom hide" id="zoom" data-act="closeZoom"><img id="zimg" alt=""></div>
 <div id="toast"></div>
+
 <script>
-var $=function(s){return document.querySelector(s)};
-function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null}
-function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-var LANG=ls('lang')||'hi',THEME=ls('theme')||'',ME=null,WA='';
-var T={
-en:{home:'Home',about:'About us',services:'Services',dev:'Development',news:'News',notice:'Notices',gallery:'Gallery',contact:'Complaint',account:'Profile',settings:'Settings',admin:'Admin',privacy:'Privacy',terms:'Terms',login:'Login',register:'Register',logout:'Logout',name:'Name',email:'Email',password:'Password',mobile:'Mobile (10 digits)',subject:'Subject',details:'Details',send:'Submit',search:'Search',none:'Nothing here yet.',pending:'Pending',in_progress:'In progress',resolved:'Resolved',ongoing:'Ongoing',completed:'Completed',lang:'Language',theme:'Theme',light:'Light',dark:'Dark',auto:'Auto',loading:'Loading...',welcome:'Welcome to Gram Panchayat Panduwa',intro:'News, notices, village development and public complaints in one place.',sample:'Sample content. Admin can replace it with real information.',mycomp:'My complaints',save:'Save',oldpass:'Old password',newpass:'New password',add:'Add',del:'Delete',type:'Type',title:'Title',titlehi:'Title (Hindi)',body:'Text',bodyhi:'Text (Hindi)',status:'Status',img:'Photo link (http...)',cap:'Caption',users:'Users',comps:'Complaints',total:'Total',project:'Project',sure:'Delete this?',done:'Done'},
-hi:{home:'होम',about:'हमारे बारे में',services:'सेवाएं',dev:'विकास',news:'समाचार',notice:'सूचनाएं',gallery:'गैलरी',contact:'शिकायत',account:'प्रोफाइल',settings:'सेटिंग्स',admin:'एडमिन',privacy:'गोपनीयता',terms:'शर्तें',login:'लॉगिन',register:'रजिस्टर',logout:'लॉगआउट',name:'नाम',email:'ईमेल',password:'पासवर्ड',mobile:'मोबाइल (10 अंक)',subject:'विषय',details:'विवरण',send:'भेजें',search:'खोजें',none:'अभी कुछ नहीं है।',pending:'लंबित',in_progress:'प्रक्रिया में',resolved:'हल हुआ',ongoing:'जारी',completed:'पूर्ण',lang:'भाषा',theme:'थीम',light:'लाइट',dark:'डार्क',auto:'ऑटो',loading:'लोड हो रहा है...',welcome:'ग्राम पंचायत पंडुवा में आपका स्वागत है',intro:'समाचार, सूचनाएं, गांव का विकास और शिकायत एक ही जगह।',sample:'यह सैंपल जानकारी है। एडमिन असली जानकारी डाल सकता है।',mycomp:'मेरी शिकायतें',save:'सेव करें',oldpass:'पुराना पासवर्ड',newpass:'नया पासवर्ड',add:'जोड़ें',del:'हटाएं',type:'प्रकार',title:'शीर्षक',titlehi:'शीर्षक (हिंदी)',body:'विवरण',bodyhi:'विवरण (हिंदी)',status:'स्थिति',img:'फोटो लिंक (http...)',cap:'कैप्शन',users:'यूज़र',comps:'शिकायतें',total:'कुल',project:'परियोजना',sure:'हटाएं?',done:'हो गया'}
+const $ = s => document.querySelector(s);
+
+let ME = null;
+let LANG = localStorage.getItem("lang") || "hi";
+let THEME = localStorage.getItem("theme") || "";
+let PAGE = 1;
+let TYPE = "news";
+let SEARCH = "";
+
+const words = {
+ hi:{
+ home:"होम",about:"हमारे बारे में",services:"सेवाएं",
+ dev:"विकास कार्य",news:"समाचार",notice:"सूचनाएं",
+ gallery:"गैलरी",contact:"शिकायत",account:"प्रोफाइल",
+ settings:"सेटिंग्स",admin:"एडमिन",login:"लॉगिन",
+ register:"रजिस्टर",logout:"लॉगआउट",name:"नाम",
+ email:"ईमेल",password:"पासवर्ड",mobile:"मोबाइल नंबर",
+ subject:"विषय",details:"शिकायत का विवरण",
+ send:"शिकायत भेजें",save:"सेव करें",search:"खोजें",
+ none:"अभी कोई जानकारी उपलब्ध नहीं है।",
+ welcome:"ग्राम पंचायत पंडुवा में आपका स्वागत है",
+ intro:"गांव की जानकारी, समाचार, सूचनाएं और शिकायत सुविधा।",
+ mycomp:"मेरी शिकायतें",oldpass:"पुराना पासवर्ड",
+ newpass:"नया पासवर्ड",add:"जोड़ें",del:"हटाएं",
+ title:"शीर्षक",titlehi:"हिंदी शीर्षक",body:"विवरण",
+ bodyhi:"हिंदी विवरण",status:"स्थिति",img:"फोटो URL",
+ cap:"फोटो कैप्शन",users:"यूज़र",comps:"शिकायतें",
+ total:"कुल शिकायतें",pending:"लंबित",
+ in_progress:"प्रक्रिया में",resolved:"हल हुई",
+ ongoing:"जारी",completed:"पूर्ण",type:"प्रकार",
+ lang:"भाषा",theme:"थीम",light:"लाइट",dark:"डार्क",
+ auto:"ऑटो",done:"हो गया",project:"परियोजना"
+ },
+ en:{
+ home:"Home",about:"About",services:"Services",
+ dev:"Development",news:"News",notice:"Notices",
+ gallery:"Gallery",contact:"Complaint",account:"Profile",
+ settings:"Settings",admin:"Admin",login:"Login",
+ register:"Register",logout:"Logout",name:"Name",
+ email:"Email",password:"Password",mobile:"Mobile",
+ subject:"Subject",details:"Details",send:"Submit Complaint",
+ save:"Save",search:"Search",none:"Nothing available yet.",
+ welcome:"Welcome to Gram Panchayat Panduwa",
+ intro:"Village information, news, notices and complaints.",
+ mycomp:"My Complaints",oldpass:"Old Password",
+ newpass:"New Password",add:"Add",del:"Delete",
+ title:"Title",titlehi:"Hindi Title",body:"Description",
+ bodyhi:"Hindi Description",status:"Status",img:"Photo URL",
+ cap:"Photo Caption",users:"Users",comps:"Complaints",
+ total:"Total Complaints",pending:"Pending",
+ in_progress:"In progress",resolved:"Resolved",
+ ongoing:"Ongoing",completed:"Completed",type:"Type",
+ lang:"Language",theme:"Theme",light:"Light",dark:"Dark",
+ auto:"Auto",done:"Done",project:"Project"
+ }
 };
-function t(k){return (T[LANG]&&T[LANG][k])||T.en[k]||k}
-function api(p,m,b){return fetch(p,{method:m||'GET',headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined,credentials:'same-origin'}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||'Error');return j})})}
-function toast(m,bad){var e=$('#toast');e.textContent=m;e.style.display='block';e.style.background=bad?'#c62828':'';e.style.color=bad?'#fff':'';clearTimeout(toast.t);toast.t=setTimeout(function(){e.style.display='none'},2600)}
-function fail(e){toast(e.message,1)}
-function fld(n,l,type,extra){return '<label>'+t(l)+'</label><input name="'+n+'" type="'+(type||'text')+'" '+(extra||'')+'>'}
-function opts(list,sel){return list.map(function(k){return '<option value="'+k+'"'+(k===sel?' selected':'')+'>'+t(k)+'</option>'}).join('')}
-function card(p){var ti=LANG==='hi'&&p.title_hi?p.title_hi:p.title,bo=LANG==='hi'&&p.body_hi?p.body_hi:p.body;return '<article class="card">'+(p.image_url?'<img src="'+esc(p.image_url)+'" alt="">':'')+'<h3>'+esc(ti)+'</h3>'+(p.status?'<span class="chip">'+t(p.status)+'</span> ':'')+'<small class="note">'+new Date(p.created_at).toLocaleDateString('en-IN')+'</small><p>'+esc(bo||'')+'</p></article>'}
-function list(items){return items.length?items.map(card).join(''):'<p class="note">'+t('none')+'</p>'}
-var S={type:'news',page:1,q:''};
-function pager(more){return '<div class="pg"><button class="btn alt" data-act="prev"'+(S.page<2?' disabled':'')+'>&lsaquo;</button><span>'+S.page+'</span><button class="btn alt" data-act="next"'+(more?'':' disabled')+'>&rsaquo;</button></div>'}
-function stat(n){return {pending:t('pending'),in_progress:t('in_progress'),resolved:t('resolved')}[n]||n}
 
-var pages={
-home:function(){return Promise.all([api('/api/posts?type=news&page=1'),api('/api/posts?type=notice&page=1')]).then(function(r){return '<section class="hero"><h1>'+t('welcome')+'</h1><p>'+t('intro')+'</p></section><h2>'+t('news')+'</h2>'+list(r[0].items.slice(0,3))+'<h2>'+t('notice')+'</h2>'+list(r[1].items.slice(0,3))+'<p class="note">'+t('sample')+'</p>'})},
-about:function(){return Promise.resolve('<h2>'+t('about')+'</h2><div class="card"><h3>Raju Prasad Pradhan</h3><p>Pradhan, Gram Panchayat Panduwa, Bara, Prayagraj, Uttar Pradesh.</p><p class="note">'+t('sample')+'</p></div>')},
-services:function(){return Promise.resolve('<h2>'+t('services')+'</h2><div class="card"><p>Sarkari yojana ki jaankari, gaon ki sarvajanik suvidhayein aur zaroori documents ki jaankari yahan dikhayi jayegi.</p><p class="note">'+t('sample')+'</p></div><div class="card"><a href="#contact">'+t('contact')+' &rsaquo;</a></div>')},
-dev:function(){return api('/api/posts?type=project&page='+S.page).then(function(r){return '<h2>'+t('dev')+'</h2>'+list(r.items)+pager(r.more)})},
-news:function(){return api('/api/posts?type='+S.type+'&page='+S.page+'&q='+encodeURIComponent(S.q)).then(function(r){return '<h2>'+t('news')+' / '+t('notice')+'</h2><div class="tabs">'+['news','notice'].map(function(k){return '<button class="'+(S.type===k?'on':'')+'" data-act="tab" data-v="'+k+'">'+t(k)+'</button>'}).join('')+'</div><form data-form="search" class="row"><input name="q" value="'+esc(S.q)+'" placeholder="'+t('search')+'"><button class="btn">'+t('search')+'</button></form>'+list(r.items)+pager(r.more)})},
-gallery:function(){return api('/api/gallery').then(function(r){return '<h2>'+t('gallery')+'</h2>'+(r.items.length?'<div class="grid">'+r.items.map(function(g){return '<img src="'+esc(g.url)+'" alt="'+esc(g.caption||'')+'" data-act="zoom" data-src="'+esc(g.url)+'">'}).join('')+'</div>':'<p class="note">'+t('none')+'</p>')})},
-contact:function(){return Promise.resolve('<h2>'+t('contact')+'</h2><form class="card" data-form="complaint">'+fld('name','name','text','required')+fld('mobile','mobile','tel','required inputmode="numeric" maxlength="10"')+fld('subject','subject','text','required')+'<label>'+t('details')+'</label><textarea name="details" required></textarea><button class="btn">'+t('send')+'</button></form><div class="card"><p>Gram Panchayat Panduwa, Bara, Prayagraj, UP</p>'+(WA?'<a class="btn" href="https://wa.me/'+WA+'">WhatsApp</a>':'<p class="note">WhatsApp number admin baad me jodega.</p>')+'</div>')},
-account:function(){
-if(!ME)return Promise.resolve('<h2>'+t('login')+'</h2><form class="card" data-form="login">'+fld('email','email','email','required')+fld('password','password','password','required')+'<button class="btn">'+t('login')+'</button></form><h2>'+t('register')+'</h2><form class="card" data-form="register">'+fld('name','name','text','required')+fld('email','email','email','required')+fld('password','password','password','required minlength="6"')+'<button class="btn">'+t('register')+'</button></form>');
-return api('/api/complaints/mine').then(function(r){return '<h2>'+t('account')+'</h2><div class="card"><b>'+esc(ME.name)+'</b><div class="note">'+esc(ME.email)+(ME.role==='admin'?' (admin)':'')+'</div></div><form class="card" data-form="name">'+'<label>'+t('name')+'</label><input name="name" value="'+esc(ME.name)+'" required><button class="btn">'+t('save')+'</button></form><form class="card" data-form="pass">'+fld('oldpass','oldpass','password','required')+fld('newpass','newpass','password','required minlength="6"')+'<button class="btn">'+t('save')+'</button></form><h2>'+t('mycomp')+'</h2><div class="card">'+(r.items.length?r.items.map(function(c){return '<div class="li"><span>'+esc(c.subject)+'</span><span class="chip">'+stat(c.status)+'</span></div>'}).join(''):'<p class="note">'+t('none')+'</p>')+'</div>'+(ME.role==='admin'?'<a class="btn" href="#admin">'+t('admin')+'</a> ':'')+'<button class="btn alt" data-act="logout">'+t('logout')+'</button>'})},
-settings:function(){return Promise.resolve('<h2>'+t('settings')+'</h2><div class="card"><label>'+t('lang')+'</label><div class="tabs"><button class="'+(LANG==='hi'?'on':'')+'" data-act="lang" data-v="hi">हिंदी</button><button class="'+(LANG==='en'?'on':'')+'" data-act="lang" data-v="en">English</button></div><label>'+t('theme')+'</label><div class="tabs">'+[['','auto'],['light','light'],['dark','dark']].map(function(x){return '<button class="'+(THEME===x[0]?'on':'')+'" data-act="theme" data-v="'+x[0]+'">'+t(x[1])+'</button>'}).join('')+'</div></div><div class="card"><a href="#account">'+t('account')+' &rsaquo;</a>'+(ME?'<p><button class="btn alt" data-act="logout">'+t('logout')+'</button></p>':'')+'</div>')},
-privacy:function(){return Promise.resolve('<h2>'+t('privacy')+'</h2><div class="card"><p>Hum sirf wahi jaankari rakhte hain jo aap register ya shikayat me dete ho (naam, email, mobile). Ise sirf panchayat ke kaam ke liye use kiya jata hai.</p></div>')},
-terms:function(){return Promise.resolve('<h2>'+t('terms')+'</h2><div class="card"><p>Ye ek community website hai, official sarkari website nahi. Galat ya gandi shikayat na bhejein.</p></div>')},
-admin:function(){
-if(!ME||ME.role!=='admin')return Promise.resolve('<p class="err">Sirf admin ke liye. <a href="#account">'+t('login')+'</a></p>');
-return Promise.all([api('/api/admin/stats'),api('/api/admin/complaints'),api('/api/admin/users'),api('/api/posts?page=1'),api('/api/gallery')]).then(function(r){var st=r[0];
-return '<h2>'+t('admin')+'</h2><div class="stat"><div><b>'+st.users+'</b>'+t('users')+'</div><div><b>'+st.total+'</b>'+t('comps')+'</div><div><b>'+st.pending+'</b>'+t('pending')+'</div><div><b>'+st.resolved+'</b>'+t('resolved')+'</div></div>'+
-'<h2>'+t('add')+'</h2><form class="card" data-form="post"><label>'+t('type')+'</label><select name="type"><option value="news">'+t('news')+'</option><option value="notice">'+t('notice')+'</option><option value="project">'+t('project')+'</option></select>'+fld('title','title','text','required')+fld('title_hi','titlehi')+'<label>'+t('body')+'</label><textarea name="body"></textarea><label>'+t('bodyhi')+'</label><textarea name="body_hi"></textarea><label>'+t('status')+' ('+t('project')+')</label><select name="status"><option value="">-</option><option value="ongoing">'+t('ongoing')+'</option><option value="completed">'+t('completed')+'</option></select>'+fld('image_url','img','url')+'<button class="btn">'+t('add')+'</button></form>'+
-'<div class="card">'+(r[3].items.length?r[3].items.map(function(p){return '<div class="li"><span>'+esc(p.type)+': '+esc(p.title)+'</span><button class="btn red" data-act="delPost" data-id="'+p.id+'">'+t('del')+'</button></div>'}).join(''):'<p class="note">'+t('none')+'</p>')+'</div>'+
-'<h2>'+t('gallery')+'</h2><form class="card" data-form="pic">'+fld('url','img','url','required')+fld('caption','cap')+'<button class="btn">'+t('add')+'</button></form><div class="card">'+r[4].items.map(function(g){return '<div class="li"><span>'+esc(g.caption||g.url.slice(0,30))+'</span><button class="btn red" data-act="delPic" data-id="'+g.id+'">'+t('del')+'</button></div>'}).join('')+'</div>'+
-'<h2>'+t('comps')+'</h2><div class="card">'+(r[1].items.length?r[1].items.map(function(c){return '<div style="padding:8px 0;border-bottom:1px solid var(--line)"><b>'+esc(c.subject)+'</b><div class="note">'+esc(c.name)+' | '+esc(c.mobile)+'</div><p>'+esc(c.details)+'</p><select data-act="setStatus" data-id="'+c.id+'">'+opts(['pending','in_progress','resolved'],c.status)+'</select></div>'}).join(''):'<p class="note">'+t('none')+'</p>')+'</div>'+
-'<h2>'+t('users')+'</h2><div class="card">'+r[2].items.map(function(u){return '<div class="li"><span>'+esc(u.name)+' <span class="note">'+esc(u.email)+' '+u.role+'</span></span><button class="btn red" data-act="delUser" data-id="'+u.id+'">'+t('del')+'</button></div>'}).join('')+'</div>'})}
+function t(k){return words[LANG][k] || words.en[k] || k}
+
+function toast(msg){
+ const el=$("#toast");
+ el.textContent=msg;
+ el.style.display="block";
+ clearTimeout(window.toastTimer);
+ window.toastTimer=setTimeout(()=>el.style.display="none",2500);
+}
+
+function esc(v){
+ return String(v ?? "").replace(/[&<>"']/g,c=>({
+ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+async function api(url,method="GET",data){
+ const options={
+  method,
+  credentials:"same-origin",
+  headers:{"Content-Type":"application/json"}
+ };
+ if(data) options.body=JSON.stringify(data);
+
+ const response=await fetch(url,options);
+ const result=await response.json();
+
+ if(!response.ok) throw new Error(result.error || "Error");
+ return result;
+}
+
+function field(name,label,type="text",required=true){
+ return `
+ <label>${t(label)}</label>
+ <input name="${name}" type="${type}" ${required?"required":""}>
+ `;
+}
+
+function card(p){
+ const title=LANG==="hi" && p.title_hi ? p.title_hi : p.title;
+ const body=LANG==="hi" && p.body_hi ? p.body_hi : p.body;
+
+ return `
+ <article class="card">
+ ${p.image_url?`<img src="${esc(p.image_url)}" style="width:100%;border-radius:10px" alt="">`:""}
+ <h3>${esc(title)}</h3>
+ ${p.status?`<span class="chip">${esc(t(p.status))}</span>`:""}
+ <p>${esc(body)}</p>
+ <small class="note">${new Date(p.created_at).toLocaleDateString("hi-IN")}</small>
+ </article>
+ `;
+}
+
+function list(items){
+ return items.length ? items.map(card).join("") :
+ `<p class="note">${t("none")}</p>`;
+}
+
+function pager(more){
+ return `
+ <div class="tabs">
+ <button class="btn alt" data-action="prev" ${PAGE===1?"disabled":""}>←</button>
+ <button class="btn alt">${PAGE}</button>
+ <button class="btn alt" data-action="next" ${!more?"disabled":""}>→</button>
+ </div>
+ `;
+}
+
+const pages={
+
+home:async()=>{
+ const [a,b]=await Promise.all([
+  api("/api/posts?type=news"),
+  api("/api/posts?type=notice")
+ ]);
+
+ return `
+ <section class="hero">
+ <h1>${t("welcome")}</h1>
+ <p>${t("intro")}</p>
+ </section>
+ <h2>${t("news")}</h2>
+ ${list(a.items.slice(0,3))}
+ <h2>${t("notice")}</h2>
+ ${list(b.items.slice(0,3))}
+ <div class="card note">यह सैंपल वेबसाइट है। वास्तविक जानकारी एडमिन द्वारा अपडेट की जा सकती है।</div>
+ `;
+},
+
+about:async()=>`
+ <h2>${t("about")}</h2>
+ <div class="card">
+ <h3>Raju Prasad Pradhan</h3>
+ <p>Gram Panchayat Panduwa, Bara, Prayagraj, Uttar Pradesh.</p>
+ <p class="note">यह जानकारी वेबसाइट संचालक द्वारा अपडेट की जा सकती है।</p>
+ </div>
+`,
+
+services:async()=>`
+ <h2>${t("services")}</h2>
+ <div class="card">
+ <h3>जन शिकायत</h3>
+ <p>गांव की समस्याओं और सार्वजनिक सुविधाओं से जुड़ी शिकायत भेजें।</p>
+ <a class="btn" href="#contact">शिकायत भेजें</a>
+ </div>
+ <div class="card">
+ <h3>सामान्य जानकारी</h3>
+ <p>ग्राम पंचायत से संबंधित उपयोगी जानकारी यहां प्रकाशित की जाएगी।</p>
+ </div>
+`,
+
+dev:async()=>{
+ const r=await api("/api/posts?type=project&page="+PAGE);
+ return `<h2>${t("dev")}</h2>${list(r.items)}${pager(r.more)}`;
+},
+
+news:async()=>{
+ const r=await api(
+  "/api/posts?type="+TYPE+"&page="+PAGE+"&q="+encodeURIComponent(SEARCH)
+ );
+
+ return `
+ <h2>${t("news")} / ${t("notice")}</h2>
+ <div class="tabs">
+ <button data-action="tab" data-value="news" class="${TYPE==="news"?"on":""}">${t("news")}</button>
+ <button data-action="tab" data-value="notice" class="${TYPE==="notice"?"on":""}">${t("notice")}</button>
+ </div>
+ <form data-form="search">
+ <input name="q" placeholder="${t("search")}" value="${esc(SEARCH)}">
+ <button class="btn">${t("search")}</button>
+ </form>
+ ${list(r.items)}
+ ${pager(r.more)}
+ `;
+},
+
+gallery:async()=>{
+ const r=await api("/api/gallery");
+
+ return `
+ <h2>${t("gallery")}</h2>
+ ${r.items.length?`
+ <div class="grid">
+ ${r.items.map(g=>`
+ <div>
+ <img src="${esc(g.url)}" alt="${esc(g.caption)}">
+ <div class="note">${esc(g.caption)}</div>
+ </div>
+ `).join("")}
+ </div>`:`<p>${t("none")}</p>`}
+ `;
+},
+
+contact:async()=>`
+ <h2>${t("contact")}</h2>
+ <form class="card" data-form="complaint">
+ ${field("name","name")}
+ ${field("mobile","mobile","tel")}
+ ${field("subject","subject")}
+ <label>${t("details")}</label>
+ <textarea name="details" required></textarea>
+ <button class="btn">${t("send")}</button>
+ </form>
+ <div class="card">Gram Panchayat Panduwa, Bara, Prayagraj, Uttar Pradesh.</div>
+`,
+
+account:async()=>{
+ if(!ME){
+  return `
+  <h2>${t("login")}</h2>
+  <form class="card" data-form="login">
+  ${field("email","email","email")}
+  ${field("password","password","password")}
+  <button class="btn">${t("login")}</button>
+  </form>
+
+  <h2>${t("register")}</h2>
+  <form class="card" data-form="register">
+  ${field("name","name")}
+  ${field("email","email","email")}
+  ${field("password","password","password")}
+  <button class="btn">${t("register")}</button>
+  </form>
+  `;
+ }
+
+ const r=await api("/api/complaints/mine");
+
+ return `
+ <h2>${t("account")}</h2>
+ <div class="card">
+ <h3>${esc(ME.name)}</h3>
+ <p>${esc(ME.email)}</p>
+ <p>${ME.role==="admin"?"Admin": "User"}</p>
+ </div>
+
+ <form class="card" data-form="name">
+ <label>${t("name")}</label>
+ <input name="name" value="${esc(ME.name)}" required>
+ <button class="btn">${t("save")}</button>
+ </form>
+
+ <form class="card" data-form="password">
+ ${field("oldpass","oldpass","password")}
+ ${field("newpass","newpass","password")}
+ <button class="btn">${t("save")}</button>
+ </form>
+
+ <h2>${t("mycomp")}</h2>
+ <div class="card">
+ ${r.items.length?r.items.map(c=>`
+ <div class="li">
+ <b>${esc(c.subject)}</b>
+ <span class="chip">${esc(t(c.status))}</span>
+ <p class="note">${esc(c.details)}</p>
+ </div>
+ `).join(""):t("none")}
+ </div>
+
+ ${ME.role==="admin"?'<a class="btn" href="#admin">Admin Dashboard</a>':""}
+ <p><button class="btn alt" data-action="logout">${t("logout")}</button></p>
+ `;
+},
+
+settings:async()=>`
+ <h2>${t("settings")}</h2>
+ <div class="card">
+ <label>${t("lang")}</label>
+ <div class="tabs">
+ <button data-action="lang" data-value="hi">हिंदी</button>
+ <button data-action="lang" data-value="en">English</button>
+ </div>
+
+ <label>${t("theme")}</label>
+ <div class="tabs">
+ <button data-action="theme" data-value="">${t("auto")}</button>
+ <button data-action="theme" data-value="light">${t("light")}</button>
+ <button data-action="theme" data-value="dark">${t("dark")}</button>
+ </div>
+ </div>
+`,
+
+privacy:async()=>`
+ <h2>गोपनीयता नीति</h2>
+ <div class="card">
+ वेबसाइट पर दी गई जानकारी का उपयोग शिकायत और अकाउंट सेवाओं के लिए किया जाता है।
+ </div>
+`,
+
+terms:async()=>`
+ <h2>नियम एवं शर्तें</h2>
+ <div class="card">
+ यह एक कम्युनिटी वेबसाइट है, आधिकारिक सरकारी वेबसाइट नहीं।
+ </div>
+`,
+
+admin:async()=>{
+ if(!ME || ME.role!=="admin"){
+  return `<p class="err">Admin login जरूरी है। <a href="#account">Login</a></p>`;
+ }
+
+ const [stats,complaints,users,posts,gallery]=await Promise.all([
+  api("/api/admin/stats"),
+  api("/api/admin/complaints"),
+  api("/api/admin/users"),
+  api("/api/posts?page=1"),
+  api("/api/gallery")
+ ]);
+
+ return `
+ <h2>Admin Dashboard</h2>
+
+ <div class="stat">
+ <div><b>${stats.users}</b>${t("users")}</div>
+ <div><b>${stats.total}</b>${t("total")}</div>
+ <div><b>${stats.pending}</b>${t("pending")}</div>
+ <div><b>${stats.resolved}</b>${t("resolved")}</div>
+ </div>
+
+ <h2>नई पोस्ट जोड़ें</h2>
+ <form class="card" data-form="post">
+ <label>${t("type")}</label>
+ <select name="type">
+ <option value="news">News</option>
+ <option value="notice">Notice</option>
+ <option value="project">Project</option>
+ </select>
+
+ ${field("title","title")}
+ ${field("title_hi","titlehi")}
+ <label>${t("body")}</label><textarea name="body"></textarea>
+ <label>${t("bodyhi")}</label><textarea name="body_hi"></textarea>
+
+ <label>${t("status")}</label>
+ <select name="status">
+ <option value="">-</option>
+ <option value="ongoing">Ongoing</option>
+ <option value="completed">Completed</option>
+ </select>
+
+ ${field("image_url","img","url",false)}
+ <button class="btn">${t("add")}</button>
+ </form>
+
+ <h2>पोस्ट प्रबंधन</h2>
+ <div class="card">
+ ${posts.items.map(p=>`
+ <div class="li">
+ ${esc(p.title)}
+ <button class="btn red" data-action="deletePost" data-id="${p.id}">हटाएं</button>
+ </div>
+ `).join("")}
+ </div>
+
+ <h2>Gallery में फोटो जोड़ें</h2>
+ <form class="card" data-form="pic">
+ ${field("url","img","url")}
+ ${field("caption","cap", "text",false)}
+ <button class="btn">${t("add")}</button>
+ </form>
+
+ <div class="card">
+ ${gallery.items.map(g=>`
+ <div class="li">
+ ${esc(g.caption || g.url)}
+ <button class="btn red" data-action="deletePic" data-id="${g.id}">हटाएं</button>
+ </div>
+ `).join("")}
+ </div>
+
+ <h2>शिकायत प्रबंधन</h2>
+ <div class="card">
+ ${complaints.items.map(c=>`
+ <div class="li">
+ <b>${esc(c.subject)}</b>
+ <p>${esc(c.name)} | ${esc(c.mobile)}</p>
+ <p>${esc(c.details)}</p>
+ <select data-action="status" data-id="${c.id}">
+ ${["pending","in_progress","resolved"].map(s=>
+ `<option value="${s}" ${s===c.status?"selected":""}>${t(s)}</option>`
+ ).join("")}
+ </select>
+ </div>
+ `).join("")}
+ </div>
+
+ <h2>यूज़र प्रबंधन</h2>
+ <div class="card">
+ ${users.items.map(u=>`
+ <div class="li">
+ <b>${esc(u.name)}</b>
+ <p class="note">${esc(u.email)} | ${esc(u.role)}</p>
+ ${u.id!==ME.id?`<button class="btn red" data-action="deleteUser" data-id="${u.id}">हटाएं</button>`:""}
+ </div>
+ `).join("")}
+ </div>
+ `;
+}
 };
 
-var NAV=['home','about','services','dev','news','gallery','contact','privacy','terms'];
-var BOT=[['home','&#8962;'],['services','&#9776;'],['gallery','&#9635;'],['account','&#9786;'],['settings','&#9881;']];
-var last='';
-function go(){
-var p=(location.hash||'#home').slice(1);if(!pages[p])p='home';
-if(p!==last){S.page=1;last=p}
-var nav=NAV.concat(ME&&ME.role==='admin'?['admin']:[]);
-$('#top').innerHTML=nav.map(function(k){return '<a href="#'+k+'" class="'+(k===p?'on':'')+'">'+t(k)+'</a>'}).join('');
-$('#bot').innerHTML=BOT.map(function(b){return '<a href="#'+b[0]+'" class="'+(b[0]===p?'on':'')+'"><span>'+b[1]+'</span>'+t(b[0])+'</a>'}).join('');
-$('#foot').innerHTML='Ye ek community website hai, official sarkari website nahi. <a href="#privacy">'+t('privacy')+'</a> | <a href="#terms">'+t('terms')+'</a>';
-document.title=t(p)+' | Raju Prasad Pradhan, Panduwa';
-$('#app').innerHTML='<p class="note">'+t('loading')+'</p>';
-pages[p]().then(function(h){$('#app').innerHTML=h;window.scrollTo(0,0)}).catch(function(e){$('#app').innerHTML='<p class="err">'+esc(e.message)+'</p>'})}
+const nav=[
+ "home","about","services","dev","news","gallery","contact",
+ "privacy","terms"
+];
 
-var acts={
-lang:function(a){LANG=a.dataset.v;ls('lang',LANG);go()},
-theme:function(a){THEME=a.dataset.v;ls('theme',THEME);document.documentElement.dataset.theme=THEME;go()},
-logout:function(){api('/api/auth/logout','POST').then(function(){ME=null;location.hash='#home';go()})},
-tab:function(a){S.type=a.dataset.v;S.page=1;go()},
-prev:function(){S.page--;go()},next:function(){S.page++;go()},
-zoom:function(a){$('#zimg').src=a.dataset.src;$('#zoom').classList.remove('hide')},
-closeZoom:function(){$('#zoom').classList.add('hide')},
-delPost:function(a){if(confirm(t('sure')))api('/api/admin/posts/'+a.dataset.id,'DELETE').then(go).catch(fail)},
-delPic:function(a){if(confirm(t('sure')))api('/api/admin/gallery/'+a.dataset.id,'DELETE').then(go).catch(fail)},
-delUser:function(a){if(confirm(t('sure')))api('/api/admin/users/'+a.dataset.id,'DELETE').then(go).catch(fail)}
-};
-document.addEventListener('click',function(e){var a=e.target.closest('[data-act]');if(a&&acts[a.dataset.act]&&a.tagName!=='SELECT')acts[a.dataset.act](a)});
-document.addEventListener('change',function(e){var a=e.target;if(a.dataset&&a.dataset.act==='setStatus')api('/api/admin/complaints/'+a.dataset.id,'PUT',{status:a.value}).then(function(){toast(t('done'))}).catch(fail)});
+const bottom=[
+ ["home","⌂"],["services","☷"],["gallery","▧"],
+ ["account","☺"],["settings","⚙"]
+];
 
-function authDone(j){ME=j.user;toast(t('done'));location.hash='#account';go()}
-var forms={
-login:function(d){api('/api/auth/login','POST',d).then(authDone).catch(fail)},
-register:function(d){api('/api/auth/register','POST',d).then(authDone).catch(fail)},
-complaint:function(d,f){api('/api/complaints','POST',d).then(function(){f.reset();toast(t('done'))}).catch(fail)},
-name:function(d){api('/api/me','PUT',d).then(function(j){ME=j.user;toast(t('done'));go()}).catch(fail)},
-pass:function(d,f){api('/api/me/password','PUT',d).then(functio
+async function load(){
+ let page=(location.hash||"#home").slice(1);
+ if(!pages[page])page="home";
+
+ const all=nav.concat(ME?.role==="admin"?["admin"]:[]);
+
+ $("#top").innerHTML=all.map(k=>
+ `<a href="#${k}" class="${k===page?"on":""}">${t(k)}</a>`
+ ).join("");
+
+ $("#bot").innerHTML=bottom.map(x=>
+ `<a href="#${x[0]}" class="${x[0]===page?"on":""}">
+ <span>${x[1]}</span>${t(x[0])}</a>`
+ ).join("");
+
+ $("#app").innerHTML="<p>लोड हो रहा है...</p>";
+
+ try{
+  $("#app").innerHTML=await pages[page]();
+  window.scrollTo(0,0);
+ }catch(e){
+  $("#app").innerHTML=`<div class="card err">${esc(e.message)}
+  <p>कृपया इंटरनेट या सर्वर कनेक्शन चेक करें।</p></div>`;
+ }
+}
+
+function formData(form){
+ return Object.fromEntries(new FormData(form).entries());
+}
+
+document.addEventListener("click",async e=>{
+ const b=e.target.closest("[data-action]");
+ if(!b)return;
+
+ const action=b.dataset.action;
+ const id=b.dataset.id;
+
+ try{
+  if(action==="logout"){
+   await api("/api/auth/logout","POST");
+   ME=null;
+   location.hash="#home";
+   await load();
+  }
+
+  if(action==="lang"){
+   LANG=b.dataset.value;
+   localStorage.setItem("lang",LANG);
+   load();
+  }
+
+  if(action==="theme"){
+   THEME=b.dataset.value;
+   localStorage.setItem("theme",THEME);
+   document.documentElement.dataset.theme=THEME;
+   load();
+  }
+
+  if(action==="tab"){
+   TYPE=b.dataset.value;
+   PAGE=1;
+   load();
+  }
+
+  if(action==="prev"){
+   PAGE=Math.max(1,PAGE-1);
+   load();
+  }
+
+  if(action==="next"){
+   PAGE++;
+   load();
+  }
+
+  if(action==="deletePost" && confirm("क्या पोस्ट हटानी है?")){
+   await api("/api/admin/posts/"+id,"DELETE");
+   toast("पोस्ट हट गई");
+   load();
+  }
+
+  if(action==="deletePic" && confirm("क्या फोटो हटानी है?")){
+   await api("/api/admin/gallery/"+id,"DELETE");
+   toast("फोटो हट गई");
+   load();
+  }
+
+  if(action==="deleteUser" && confirm("क्या यूज़र हटाना है?")){
+   await api("/api/admin/users/"+id,"DELETE");
+   toast("यूज़र हट गया");
+   load();
+  }
+ }catch(err){
+  toast(err.message);
+ }
+});
+
+document.addEventListener("change",async e=>{
+ const el=e.target;
+ if(el.dataset.action==="status"){
+  try{
+   await api("/api/admin/complaints/"+el.dataset.id,"PUT",{status:el.value});
+   toast("शिकायत की स्थिति अपडेट हुई");
+  }catch(err){toast(err.message)}
+ }
+});
+
+document.addEventListener("submit",async e=>{
+ const form=e.target;
+ if(!form.dataset.form)return;
+
+ e.preventDefault();
+ const type=form.dataset.form;
+ const data=formData(form);
+
+ try{
+  if(type==="login"){
+   const r=await api("/api/auth/login","POST",data);
+   ME=r.user;
+   toast("लॉगिन सफल");
+   location.hash="#account";
+   load();
+  }
+
+  if(type==="register"){
+   const r=await api("/api/auth/register","POST",data);
+   ME=r.user;
+   toast("रजिस्ट्रेशन सफल");
+   location.hash="#account";
+   load();
+  }
+
+  if(type==="complaint"){
+   await api("/api/complaints","POST",data);
+   form.reset();
+   toast("शिकायत भेज दी गई");
+  }
+
+  if(type==="name"){
+   const r=await api("/api/me","PUT",data);
+   ME=r.user;
+   toast("नाम अपडेट हुआ");
+   load();
+  }
+
+  if(type==="password"){
+   await api("/api/me/password","PUT",data);
+   form.reset();
+   toast("पासवर्ड बदल गया");
+  }
+
+  if(type==="search"){
+   SEARCH=data.q || "";
+   PAGE=1;
+   load();
+  }
+
+  if(type==="post"){
+   await api("/api/admin/posts","POST",data);
+   form.reset();
+   toast("पोस्ट जोड़ दी गई");
+   load();
+  }
+
+  if(type==="pic"){
+   await api("/api/admin/gallery","POST",data);
+   form.reset();
+   toast("फोटो जोड़ दी गई");
+   load();
+  }
+
+ }catch(err){
+  toast(err.message);
+ }
+});
+
+window.addEventListener("hashchange",()=>{
+ PAGE=1;
+ load();
+});
+
+async function start(){
+ document.documentElement.dataset.theme=THEME;
+
+ try{
+  const r=await api("/api/me");
+  ME=r.user;
+ }catch{
+  ME=null;
+ }
+
+ load();
+}
+
+start();
+</script>
+</body>
+</html>

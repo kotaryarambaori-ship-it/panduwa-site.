@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gram Panchayat Panduwa</title>
+<meta name="description" content="Official Gram Panchayat Panduwa website">
+
+<style>
+:root {
+  --navy:#102b50;
+  --green:#138b57;
+  --light:#f3f6fa;
+  --white:#fff;
+  --ink:#1d2939;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth;overflow-y:auto}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--ink);
+  background:var(--light);
+}
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.brand {font-size:18px;font-weight:bold}
+.brand small {display:block;font-size:11px;margin-top:4px}
+nav {
+  background:#173b65;
+  padding:10px;
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  white-space:nowrap;
+}
+nav a {color:white;text-decoration:none;font-size:14px}
+.hero {
+  min-height:330px;
+  padding:65px 20px;
+  color:white;
+  text-align:center;
+  background:linear-gradient(#102b5080,#102b50c9),
+  url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1200")
+  center/cover;
+}
+.hero h1 {font-size:32px;margin:20px 0}
+.hero p {font-size:17px}
+.btn {
+  background:var(--green);
+  color:white;
+  padding:12px 18px;
+  border:0;
+  border-radius:9px;
+  text-decoration:none;
+  display:inline-block;
+  cursor:pointer;
+  margin:5px;
+}
+section {padding:28px 15px;scroll-margin-top:100px}
+.heading {text-align:center;color:var(--navy);margin-bottom:20px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.card {
+  background:white;
+  padding:16px;
+  border-radius:14px;
+  box-shadow:0 3px 15px #102b5010;
+  overflow-wrap:anywhere;
+}
+.service {
+  text-align:center;
+  font-size:16px;
+  font-weight:bold;
+  color:var(--navy);
+}
+.service span {font-size:30px;display:block;margin-bottom:8px}
+.item img {
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+.item h3 {color:var(--navy)}
+input,textarea,select {
+  width:100%;
+  padding:13px;
+  border:1px solid #ccd5e0;
+  border-radius:8px;
+  margin:7px 0;
+  font:inherit;
+}
+textarea {min-height:110px}
+footer {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+footer a {color:white}
+.bottom {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-around;
+  background:white;
+  padding:12px 3px;
+  box-shadow:0 -3px 15px #0002;
+  z-index:20;
+}
+.bottom a {
+  text-decoration:none;
+  color:var(--navy);
+  font-size:12px;
+  text-align:center;
+}
+.whatsapp {
+  position:fixed;
+  right:16px;
+  bottom:75px;
+  background:#20bd64;
+  color:white;
+  border-radius:50%;
+  width:55px;
+  height:55px;
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  text-decoration:none;
+  z-index:30;
+}
+.admin {
+  background:white;
+  border-radius:14px;
+  padding:16px;
+  margin:12px 0;
+}
+.hidden {display:none!important}
+.admin button {margin:4px}
+.notice {border-left:4px solid orange}
+@media(min-width:700px) {
+  main {max-width:1050px;margin:auto}
+  .grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero {min-height:430px}
+  .hero h1 {font-size:48px}
+  .bottom {display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    🏛️ GRAM PANCHAYAT PANDUWA
+    <small>आपका गाँव, आपकी पहचान</small>
+  </div>
+  <a href="#contact" style="color:white">Contact</a>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#schemes">Schemes</a>
+  <a href="#news">News</a>
+  <a href="#notice">Notice</a>
+  <a href="#development">Development</a>
+  <a href="#members">Members</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="#admin">Admin</a>
+</nav>
+
+<main>
+
+<div class="hero" id="home">
+  <h1>ग्राम पंचायत पांडुवा</h1>
+  <p>हमारा गाँव, हमारी पहचान। विकास और जनसेवा का संकल्प।</p>
+  <a class="btn" href="#about">पंचायत परिचय</a>
+  <a class="btn" href="#contact">संपर्क करें</a>
+</div>
+
+<section id="services">
+  <h2 class="heading">हमारी सुविधाएँ</h2>
+  <div class="grid">
+    <a class="card service" href="#schemes"><span>📋</span>सरकारी योजनाएँ</a>
+    <a class="card service" href="#notice"><span>📢</span>सूचनाएँ</a>
+    <a class="card service" href="#news"><span>📰</span>समाचार</a>
+    <a class="card service" href="#gallery"><span>🖼️</span>फोटो गैलरी</a>
+    <a class="card service" href="#complaint"><span>💬</span>शिकायत</a>
+    <a class="card service" href="#development"><span>🏗️</span>विकास कार्य</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="heading">हमारी पंचायत के बारे में</h2>
+  <div id="aboutList" class="grid"></div>
+</section>
+
+<section id="members">
+  <h2 class="heading">पंचायत प्रतिनिधि</h2>
+  <div id="membersList" class="grid"></div>
+</section>
+
+<section id="schemes">
+  <h2 class="heading">सरकारी योजनाएँ</h2>
+  <div id="schemesList" class="grid"></div>
+</section>
+
+<section id="notice">
+  <h2 class="heading">📢 नवीनतम सूचनाएँ</h2>
+  <div id="noticeList" class="grid"></div>
+</section>
+
+<section id="news">
+  <h2 class="heading">📰 नवीनतम समाचार</h2>
+  <div id="newsList" class="grid"></div>
+</section>
+
+<section id="development">
+  <h2 class="heading">🏗️ गाँव के विकास कार्य</h2>
+  <div id="developmentList" class="grid"></div>
+</section>
+
+<section id="gallery">
+  <h2 class="heading">📸 फोटो गैलरी</h2>
+  <div id="galleryList" class="grid"></div>
+</section>
+
+<section id="complaint">
+  <h2 class="heading">💬 शिकायत और सुझाव भेजें</h2>
+  <div class="card">
+    <form id="messageForm">
+      <input id="msgName" placeholder="आपका नाम" required maxlength="100">
+      <input id="msgPhone" placeholder="मोबाइल नंबर" maxlength="20">
+      <textarea id="msgText" placeholder="अपनी शिकायत या सुझाव लिखें" required maxlength="3000"></textarea>
+      <button class="btn" type="submit">📩 संदेश भेजें</button>
+    </form>
+    <p id="msgResult"></p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="heading">संपर्क करें</h2>
+  <div class="card">
+    <h3>🏛️ ग्राम पंचायत पांडुवा</h3>
+    <p>📍 ग्राम पंचायत पांडुवा</p>
+    <p>📞 संपर्क नंबर: अपने पंचायत नंबर से बदलें</p>
+    <p>🟢 WhatsApp पर संपर्क करें</p>
+  </div>
+</section>
+
+<section id="admin">
+  <h2 class="heading">👑 Admin Panel</h2>
+
+  <div id="loginBox" class="card">
+    <h3>Admin Login</h3>
+    <input id="adminEmail" type="email" placeholder="Admin Email">
+    <input id="adminPassword" type="password" placeholder="Password">
+    <button class="btn" onclick="adminLogin()">Login</button>
+    <p id="loginResult"></p>
+  </div>
+
+  <div id="adminBox" class="hidden">
+    <div class="admin">
+      <h3>Dashboard</h3>
+      <div id="stats"></div>
+      <button class="btn" onclick="adminLogout()">Logout</button>
+    </div>
+
+    <div class="admin">
+      <h3>➕ नई जानकारी जोड़ें</h3>
+      <select id="newSection">
+        <option value="notice">Notice</option>
+        <option value="news">News</option>
+        <option value="gallery">Gallery</option>
+        <option value="development">Development</option>
+        <option value="members">Members</option>
+        <option value="services">Services</option>
+        <option value="schemes">Schemes</option>
+        <option value="about">About</option>
+      </select>
+      <input id="newTitle" placeholder="शीर्षक">
+      <textarea id="newDescription" placeholder="विवरण"></textarea>
+      <input id="newImage" placeholder="फोटो URL (वैकल्पिक)">
+      <input id="newExtra" placeholder="अतिरिक्त जानकारी (वैकल्पिक)">
+      <button class="btn" onclick="addContent()">Publish</button>
+      <p id="addResult"></p>
+    </div>
+
+    <div class="admin">
+      <h3>Content Manage करें</h3>
+      <select id="manageSection" onchange="loadManage()">
+        <option value="notice">Notice</option>
+        <option value="news">News</option>
+        <option value="gallery">Gallery</option>
+        <option value="development">Development</option>
+        <option value="members">Members</option>
+        <option value="services">Services</option>
+        <option value="schemes">Schemes</option>
+        <option value="about">About</option>
+      </select>
+      <div id="manageList"></div>
+    </div>
+
+    <div class="admin">
+      <h3>💬 प्राप्त शिकायतें</h3>
+      <button class="btn" onclick="loadMessages()">शिकायतें देखें</button>
+      <div id="messagesList"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h3>GRAM PANCHAYAT PANDUWA</h3>
+  <p>हमारा गाँव, हमारी पहचान</p>
+  <p>
+    <a href="#about">About</a> |
+    <a href="#contact">Contact</a> |
+    <a href="#home">Home</a>
+  </p>
+  <small>© Gram Panchayat Panduwa</small>
+</footer>
+
+<div class="bottom">
+  <a href="#home">🏠<br>Home</a>
+  <a href="#notice">📢<br>Notice</a>
+  <a href="#gallery">🖼️<br>Gallery</a>
+  <a href="#complaint">💬<br>Help</a>
+  <a href="#admin">👑<br>Admin</a>
+</div>
+
+<a class="whatsapp" id="whatsappButton" href="https://wa.me/919876543210" target="_blank">☘</a>
+
+<script>
+const sections = [
+  "about", "members", "schemes", "notice",
+  "news", "development", "gallery"
+];
+
+async function api(url, options={}) {
+  const response = await fetch(url, {
+    credentials: "same-origin",
+    headers: { "Content-Type": "application/json" },
+    ...options
+  });
+
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    throw new Error(data.error || "Request failed");
+  }
+
+  return data;
+}
+
+function safe(value) {
+  return String(value || "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#039;"
+  })[char]);
+}
+
+async function loadSection(section) {
+  try {
+    const data = await api("/api/content?section=" + section);
+    const box = document.getElementById(section + "List");
+
+    if (!box) return;
+
+    if (!data.items.length) {
+      box.innerHTML = '<div class="card">अभी कोई जानकारी उपलब्ध नहीं है।</div>';
+      return;
+    }
+
+    box.innerHTML = data.items.map(item => `
+      <article class="card item ${section === "notice" ? "notice" : ""}">
+        ${item.image ? `<img src="${safe(item.image)}" alt="">` : ""}
+        <h3>${safe(item.title)}</h3>
+        <p>${safe(item.description)}</p>
+        ${item.extra ? `<small>${safe(item.extra)}</small>` : ""}
+      </article>
+    `).join("");
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function loadAll() {
+  for (const section of sections) {
+    await loadSection(section);
+  }
+}
+
+document.getElementById("messageForm").addEventListener("submit", async event => {
+  event.preventDefault();
+
+  const result = document.getElementById("msgResult");
+  result.textContent = "संदेश भेजा जा रहा है...";
+
+  try {
+    await api("/api/messages", {
+      method: "POST",
+      body: JSON.stringify({
+        name: document.getElementById("msgName").value,
+        phone: document.getElementById("msgPhone").value,
+        message: document.getElementById("msgText").value
+      })
+    });
+
+    result.textContent = "आपका संदेश सफलतापूर्वक भेज दिया गया है।";
+    event.target.reset();
+  } catch (error) {
+    result.textContent = error.message;
+  }
+});
+
+async function adminLogin() {
+  const result = document.getElementById("loginResult");
+
+  try {
+    await api("/api/admin/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: document.getElementById("adminEmail").value,
+        password: document.getElementById("adminPassword").value
+      })
+    });
+
+    result.textContent = "Login सफल!";
+    showAdmin();
+  } catch (error) {
+    result.textContent = error.message;
+  }
+}
+
+function showAdmin() {
+  document.getElementById("loginBox").classList.add("hidden");
+  document.getElementById("adminBox").classList.remove("hidden");
+  loadStats();
+  loadManage();
+}
+
+async function checkAdmin() {
+  try {
+    await api("/api/admin/me");
+    showAdmin();
+  } catch {
+    document.getElementById("loginBox").classList.remove("hidden");
+  }
+}
+
+async function adminLogout() {
+  await api("/api/admin/logout", { method: "POST" });
+  location.reload();
+}
+
+async function addContent() {
+  const result = document.getElementById("addResult");
+
+  try {
+    await api("/api/admin/content", {
+      method: "POST",
+      body: JSON.stringify({
+        section: document.getElementById("newSection").value,
+        title: document.getElementById("newTitle").value,
+        description: document.getElementById("newDescription").value,
+        image: document.getElementById("newImage").value,
+        extra: document.getElementById("newExtra").value
+      })
+    });
+
+    result.textContent = "जानकारी प्रकाशित हो गई!";
+    document.getElementById("newTitle").value = "";
+    document.getElementById("newDescription").value = "";
+    document.getElementById("newImage").value = "";
+    document.getElementById("newExtra").value = "";
+
+    await loadSection(document.getElementById("newSection").value);
+    await loadManage();
+    await loadStats();
+  } catch (error) {
+    result.textContent = error.message;
+  }
+}
+
+async function loadManage() {
+  const section = document.getElementById("manageSection").value;
+  const box = document.getElementById("manageList");
+
+  try {
+    const data = await api("/api/content?section=" + section);
+
+    box.innerHTML = data.items.map(item => `
+      <div class="card" style="margin-top:10px">
+        <b>${safe(item.title)}</b>
+        <p>${safe(item.description)}</p>
+        <button class="btn" onclick="editContent(${item.id},${JSON.stringify(item.title)},${JSON.stringify(item.description)},${JSON.stringify(item.image)},${JSON.stringify(item.extra)})">Edit</button>
+        <button class="btn" style="background:#c62828" onclick="deleteContent(${item.id})">Delete</button>
+      </div>
+    `).join("") || "कोई जानकारी नहीं है।";
+  } catch (error) {
+    box.textContent = error.message;
+  }
+}
+
+async function editContent(id, title, description, image, extra) {
+  const newTitle = prompt("शीर्षक बदलें", title);
+  if (newTitle === null) return;
+
+  const newDescription = prompt("विवरण बदलें", description);
+  if (newDescription === null) return;
+
+  try {
+    await api("/api/admin/content/" + id, {
+      method: "PUT",
+      body: JSON.stringify({
+        title: newTitle,
+        description: newDescription,
+        image,
+        extra
+      })
+    });
+
+    alert("जानकारी अपडेट हो गई।");
+    await loadManage();
+    await loadSection(document.getElementById("manageSection").value);
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function deleteContent(id) {
+  if (!confirm("क्या आप इसे हटाना चाहते हैं?")) return;
+
+  try {
+    await api("/api/admin/content/" + id, { method: "DELETE" });
+    await loadManage();
+    await loadSection(document.getElementById("manageSection").value);
+    await loadStats();
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function loadMessages() {
+  const box = document.getElementById("messagesList");
+
+  try {
+    const data = await api("/api/admin/messages");
+
+    box.innerHTML = data.items.map(item => `
+      <div class="card" style="margin-top:10px">
+        <b>${safe(item.name)}</b>
+        <p>${safe(item.phone)}</p>
+        <p>${safe(item.message)}</p>
+        <p>Status: ${safe(item.status)}</p>
+        <select id="status${item.id}">
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+        <button class="btn" onclick="updateMessage(${item.id})">Status Save</button>
+      </div>
+    `).join("") || "अभी कोई शिकायत नहीं है।";
+
+  } catch (error) {
+    box.textContent = error.message;
+  }
+}
+
+async function updateMessage(id) {
+  const status = document.getElementById("status" + id).value;
+
+  try {
+    await api("/api/admin/messages/" + id, {
+      method: "PUT",
+      body: JSON.stringify({ status })
+    });
+
+    alert("Status अपडेट हो गया।");
+    loadMessages();
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function loadStats() {
+  try {
+    const data = await api("/api/admin/stats");
+    document.getElementById("stats").innerHTML =
+      data.content.map(item =>
+        `<div class="card">${safe(item.section)}: ${item.total}</div>`
+      ).join("") +
+      `<div class="card">Messages: ${data.messages}</div>`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+loadAll();
+checkAdmin();
+</script>
+
+</body>
+  </html>
